@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - functions
+      - deploy
+      - [FUNCTION_NAME]
+      - --source=.
+      - --trigger-http
+      - --region=[FUNCTION_REGION]
+      - --runtime=nodejs10
+      - --allow-unauthenticated
